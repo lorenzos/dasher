@@ -59,7 +59,8 @@ Here's an example.
     "name": "Start Cooking Playlist",
     "address": "66:a0:dc:98:d2:63",
     "url": "http://192.168.1.55:8181/playlists/cooking/play",
-    "method": "PUT"
+    "method": "PUT",
+    "retries": 5
   },
   {
     "name": "Debug Dash Button",
@@ -74,7 +75,7 @@ Here's an example.
 ]}
 ```
 
-Buttons take up to 8 options.
+Buttons can have the following options:
 
 * `name` - Optionally give the button action a name.
 * `address` - The MAC address of the button.
@@ -87,9 +88,9 @@ Buttons take up to 8 options.
 * `json` - Optionally declare the content body as being JSON in the request.
 * `body` - Optionally provide a content-body that will be sent with the request.
 * `formData` - Optionally add formData that will be sent with the request.
+* `retries` - How many times the HTTP request will be retried if it fails, default to zero.
+* `cmd` - Used to run a local command rather than an HTTP request. Setting this will override the url parameter.
 * `debug` - Used for testing button presses and will -not- perform a request.
-* `cmd` - Used to run a local command rather than an HTTP request. Setting this
-will override the url parameter.
 
 Setting and using these values should be enough to cover almost every kind of
 request you need to make.

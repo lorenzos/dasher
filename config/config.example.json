@@ -36,7 +36,8 @@
   {
     "address": "55:a6:dc:4a:53:d4",
     "url": "https://maker.ifttt.com/trigger/Notify/with/key/4uY5SD3IQcsLKK1xUWbcV",
-    "method": "POST"
+    "method": "POST",
+    "retries": 5
   },
   {
     "address": "43:02:dc:b2:ab:23",
